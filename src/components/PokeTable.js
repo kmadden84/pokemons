@@ -1,3 +1,6 @@
+
+import PropTypes from 'prop-types';
+
 export default function PokeTable({ pokemonData = [] }) {
 
   function formatList(pokemonTypes, type, index) {
@@ -37,4 +40,8 @@ export default function PokeTable({ pokemonData = [] }) {
       </table>
     </div>
   )
-}
+};
+
+PokeTable.propTypes = {
+  pokemonData: PropTypes.array
+};
