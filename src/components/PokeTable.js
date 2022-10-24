@@ -1,6 +1,3 @@
-import Reac, { useEffect } from 'react'
-
-
 export default function PokeTable({ pokemonData = [] }) {
 
 
@@ -16,7 +13,7 @@ export default function PokeTable({ pokemonData = [] }) {
           {
             pokemonData?.map((pokemon, index) => (
               <tr key={index}>
-                <td><img src={pokemon?.image_url} /></td>
+                <td><img src={pokemon?.image_url} alt="pokemon image" /></td>
                 <td>{pokemon?.name?.toString()}</td>
                 <td>TYPE(S):{pokemon?.types?.map((type, index) => (
                   <span key={index} > {type.type.name}</span>
