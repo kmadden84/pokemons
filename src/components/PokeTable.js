@@ -19,7 +19,7 @@ export default function PokeTable({ pokemonData = [] }) {
                 <td><img src={pokemon?.image_url} /></td>
                 <td>{pokemon?.name?.toString()}</td>
                 <td>TYPE(S):{pokemon?.types?.map((type, index) => (
-                  <span> {type.type.name}</span>
+                  <span key={index} > {type.type.name}</span>
                 ))}
                 </td>
               </tr>
