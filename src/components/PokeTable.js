@@ -23,7 +23,7 @@ export default function PokeTable({ pokemonData = [] }) {
           {
             pokemonData?.map((pokemon, index) => (
               <tr key={index}>
-                <td><img src={pokemon?.image_url} /></td>
+                <td><img src={pokemon?.image_url} alt="pokemon image" /></td>
                 <td>{pokemon?.name?.toString()}</td>
                 <td>{pokemon?.types?.map((type, index) => (
                   <span key={index}>
@@ -40,8 +40,8 @@ export default function PokeTable({ pokemonData = [] }) {
       </table>
     </div>
   )
-};
+}
 
 PokeTable.propTypes = {
   pokemonData: PropTypes.array
-};
+}
